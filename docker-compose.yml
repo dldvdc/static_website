@@ -1,16 +1,10 @@
 services:
   caddy:
-    image: caddy:latest
     container_name: caddy-server
+    image: caddy:latest
+    restart: always
     ports:
-      - "8080:8080"
+      - "80:80"
     volumes:
-      - ./Caddyfile:/etc/caddy/Caddyfile:ro
-      - ./src:/usr/share/caddy:ro
-      - caddy_data:/data
-      - caddy_config:/config
-    restart: unless-stopped
-
-volumes:
-  caddy_data:
-  caddy_config:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - ./site:/usr/share/caddy
