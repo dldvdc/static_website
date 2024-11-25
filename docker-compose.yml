@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  caddy:
+    image: caddy:alpine
+    container_name: caddy-server
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./site:/srv:ro
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - ./logs:/var/log/caddy:rw
+    restart: unless-stopped
