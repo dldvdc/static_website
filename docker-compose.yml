@@ -1,11 +1,17 @@
 services:
   caddy:
-    image: caddy:alpine
+    image: caddy:latest
     container_name: caddy-server
-    restart: unless-stopped
     ports:
-      - 0.0.0.0:80:80/tcp
+      - "80:80"
+      - "443:443"
     volumes:
-      - ./src:/srv:ro
       - ./Caddyfile:/etc/caddy/Caddyfile:ro
-      - ./logs:/var/log/caddy:rw
+      - ./src:/usr/share/caddy:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    restart: unless-stopped
+
+volumes:
+  caddy_data:
+  caddy_config:
