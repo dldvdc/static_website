@@ -9,4 +9,3 @@ services:
       - ./src:/srv:ro
       - ./Caddyfile:/etc/caddy/Caddyfile:ro
       - ./logs:/var/log/caddy:rw
-    restart: unless-stopped

@@ -1,4 +1,8 @@
 :80 {
-encode zstd gzip
-file_server browse
+    root * /srv
+    file_server
+    encode gzip
+    log {
+        output stdout
+    }
 }
