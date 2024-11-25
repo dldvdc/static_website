@@ -2,10 +2,11 @@ services:
   caddy:
     image: caddy:alpine
     container_name: caddy-server
+    restart: unless-stopped
     ports:
-      - "80:80"
+      - 0.0.0.0:80:80/tcp
     volumes:
-      - ./site:/srv:ro
+      - ./src:/srv:ro
       - ./Caddyfile:/etc/caddy/Caddyfile:ro
       - ./logs:/var/log/caddy:rw
     restart: unless-stopped
