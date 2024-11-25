@@ -3,8 +3,7 @@ services:
     image: caddy:latest
     container_name: caddy-server
     ports:
-      - "80:80"
-      - "443:443"
+      - "8080:8080"
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile:ro
       - ./src:/usr/share/caddy:ro
