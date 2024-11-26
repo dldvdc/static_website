@@ -1,4 +1,4 @@
-{$DOMAIN} {
+studio-cece-design.com {
     root * /usr/share/caddy
     file_server browse
     encode gzip zstd
@@ -12,7 +12,7 @@
         X-Content-Type-Options "nosniff"
         X-Frame-Options "DENY"
         Referrer-Policy "no-referrer"
-        Content-Security-Policy "default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'"
+        Content-Security-Policy "default-src 'self'; style-src 'self'; script-src 'self';"
     }
     @notFound {
         file {
