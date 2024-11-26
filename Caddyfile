@@ -1,4 +1,4 @@
-studio-cece-design.com {
+${DOMAIN} {
     root * /usr/share/caddy
     file_server browse
     encode gzip zstd

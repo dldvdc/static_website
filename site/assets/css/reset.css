@@ -1,0 +1,63 @@
+/* Minimal Reset CSS */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 100%; /* Respecte les préférences utilisateur */
+}
+
+body {
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
+  color: rgb(49, 49, 49);
+  background-color: white;
+  text-rendering: optimizeSpeed;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  all: unset;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a:focus,
+button:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none;
+    transition: none;
+  }
+}

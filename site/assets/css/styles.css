@@ -1,0 +1,22 @@
+@import "reset.css";
+
+body,
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: #00a1e0;
+  background: whitesmoke;
+}
+
+img {
+  width: 10rem;
+  height: 10rem;
+}
+
+footer {
+  position: absolute;
+  bottom: 0.2rem;
+}
